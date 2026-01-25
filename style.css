@@ -1,0 +1,1243 @@
+/* Скидання базових стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #000; /* Чорний фон як на скріні */
+  color: #fff;
+}
+
+/* Контейнер для центрування */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+/* Стилі для блоку "герой" */
+.hero-block {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+
+  /* Градієнт від темного до більш світлого зверху вниз */
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7) 70%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./img/photo-1678356434281-0ef01a3ac02d.jpeg") no-repeat center center;
+
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+  font-size: 80px;
+  font-weight: 500;
+  letter-spacing: 3px; /* Відстань між літерами */
+  text-transform: uppercase;
+  color: white; /* Світло-сірий */
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 40px;
+
+  /* Рожевий градієнт */
+  background: linear-gradient(50deg, #ff6b9d, #cc00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Для підтримки у всіх браузерах */
+}
+
+.hero-button {
+  display: inline-block;
+  background: #d74760; /* Біла кнопка як на скріні */
+  color: #000; /* Чорний текст на кнопці */
+  padding: 16px 40px;
+  border-radius: 30px; /* Закруглені кути */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.hero-button:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff; /* Біла обводка при наведенні */
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .hero-button {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+}
+
+/* Індикатор скролу */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.wheel {
+  width: 4px;
+  height: 10px;
+  background-color: oklch(64.5% 0.246 16.439);
+  border-radius: 2px;
+  animation: scroll-wheel 1.5s ease infinite;
+}
+
+.scroll-text {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+/* Анімація колесика миші */
+@keyframes scroll-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/* Для герой-блоку додаємо позиціонування */
+.hero-block {
+  position: relative; /* Щоб індикатор позиціонувався відносно блоку */
+  /* ... решта ваших стилів ... */
+}
+
+/* ===== Блок "Послуги" ===== */
+.services-section {
+  background: black; /* Білий фон як на скріні */
+  color: #000; /* Чорний текст */
+  padding: 100px 0;
+  position: relative;
+}
+
+/* Контейнер вже є в стилях */
+
+/* Заголовок секції */
+.services-section .section-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Підзаголовок секції */
+.services-section .section-subtitle {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+/* Сітка послуг */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 40px;
+}
+
+/* Картка послуги */
+.service-card {
+  background: black; /* Світло-сірий фон картки */
+  border-radius: 12px;
+  border-color: oklch(64.5% 0.246 16.439);
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  color: oklch(64.5% 0.246 16.439); /* Рожевий акцент при наведенні */
+}
+
+/* Іконка послуги */
+.service-icon {
+  width: 70px;
+  height: 70px;
+  /* Замінити color-mix на прозорий рожевий */
+  background-color: rgba(244, 114, 182, 0.1); /* #F472B6 з 10% прозорості */
+  border-radius: 50%;
+  border: 1px solid #d74760; /* Додати border, бо у вас було border-color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 28px;
+  font-weight: bold;
+  color: oklch(64.5% 0.246 16.439);
+}
+
+/* Заголовок картки */
+.service-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Текст картки */
+.service-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  }
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .services-section .section-title {
+    font-size: 36px;
+  }
+
+  .services-section .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 колонка */
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+}
+/* ===== Блок Ціни (вертикальний список) ===== */
+/* Основний контейнер секції */
+.pricing-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Контейнер для карток (Flexbox для сітки 3+2) */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрує картки */
+  gap: 20px; /* Відступ між картками */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стиль однієї картки */
+.pricing-card {
+  background-color: #080808; /* Дуже темний сірий */
+  border: 1px solid #222; /* Тонка сіра рамка */
+  border-radius: 4px;
+  padding: 30px;
+  width: 350px; /* Фіксована ширина як на скріншоті */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Ефект при наведенні (опціонально) */
+.pricing-card:hover {
+  transform: translateY(-5px);
+  border-color: #333;
+}
+
+/* Спеціальний стиль для картки "Зведення" (червона рамка) */
+.pricing-card.featured {
+  border: 1px solid(255, 0, 64, 0.5);
+  box-shadow: 0 0 20px rgba(255, 0, 64, 0.1);
+}
+
+/* Заголовок картки */
+.pricing-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Опис під заголовком */
+.desc {
+  color: #888;
+  font-size: 13px;
+  margin: 0 0 20px 0;
+  height: 32px; /* Щоб вирівняти висоту блоків */
+}
+
+/* Блок ціни */
+.price-block {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.currency {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.amount {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.unit {
+  color: #888;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* Розділювач */
+.divider {
+  height: 1px;
+  background-color: #222;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+/* Список функцій */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1; /* Розтягує список, щоб кнопки були на одному рівні */
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+/* Іконка галочки (SVG) */
+.check-icon {
+  display: inline-flex;
+  margin-right: 12px;
+  min-width: 18px; /* Фіксована ширина для іконки */
+}
+
+.check-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #ff0040; /* Червоний колір галочки */
+  background: rgba(255, 0, 64, 0.1); /* Легкий фон під галочкою */
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* Кнопка */
+.pricing-btn {
+  width: 100%;
+  background-color: #ff0040;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+.pricing-btn:hover {
+  background-color: #d10035;
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 768px) {
+  .pricing-card {
+    width: 100%; /* На мобільному на всю ширину */
+  }
+}
+
+.pricing-section .section-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Підзаголовок секції */
+.pricing-section .section-subtitle {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+/* --- Секція Дистрибуції --- */
+
+.distribution-section {
+  background-color: oklch(14.1% 0.005 285.823);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.dist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.dist-header h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.dist-subtitle {
+  color: #888;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto 60px auto; /* Відступ до іконок */
+}
+
+/* Сітка 4 колонки */
+.dist-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 рівні колонки */
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Окремий блок з іконкою */
+.dist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Круг навколо іконки */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #1a1a1a; /* Темно-сірий круг */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.dist-item:hover .icon-circle {
+  transform: scale(1.1); /* Легке збільшення при наведенні */
+  background-color: #222;
+}
+
+/* SVG Іконки */
+.icon-circle svg {
+  width: 28px;
+  height: 28px;
+  fill: #ff0040; /* Червоний колір іконок */
+}
+
+/* Заголовки h3 */
+.dist-item h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Текст опису */
+.dist-item p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Лінія розділювач */
+.dist-divider {
+  height: 1px;
+  background-color: #222;
+  width: 100%;
+  margin: 40px 0;
+}
+
+/* Футер платформ */
+.dist-footer {
+  text-align: center;
+}
+
+.platforms-title {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.platforms-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.platforms-list span {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: default;
+  transition: color 0.3s;
+}
+
+.platforms-list span:hover {
+  color: #fff; /* Білий при наведенні */
+}
+
+/* Адаптивність (Мобільні) */
+@media (max-width: 900px) {
+  .dist-features {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшеті */
+  }
+}
+
+@media (max-width: 600px) {
+  .dist-features {
+    grid-template-columns: 1fr; /* 1 колонка на телефоні */
+  }
+
+  .platforms-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* --- Секція Про Нас --- */
+
+.about-section {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Заголовок по центру */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+/* Основний блок: Текст + Сітка */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Центрування по вертикалі */
+  gap: 60px; /* Відступ між текстом і картками */
+  margin-bottom: 60px;
+}
+
+/* Ліва частина (Текст) */
+.about-text {
+  flex: 1; /* Займає доступний простір */
+  max-width: 50%;
+}
+
+.about-text p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Права частина (Сітка 2x2) */
+.about-features {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  gap: 20px;
+}
+
+/* Картка характеристики */
+.feature-box {
+  background-color: #080808; /* Темно-сірий фон */
+  border: 1px solid #222; /* Тонка рамка */
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  border-color: #333;
+}
+
+/* Іконка в картці */
+.icon-wrap {
+  margin-bottom: 15px;
+}
+
+.icon-wrap svg {
+  width: 32px;
+  height: 32px;
+  fill: none; /* Прозорий всередині */
+  stroke: #ff0040; /* Червоний контур */
+  stroke-width: 1.5; /* Товщина ліній */
+}
+/* Для деяких іконок краще використовувати fill, 
+   тому додамо правило для заповнених іконок */
+.icon-wrap svg path {
+  fill: #ff0040;
+  stroke: none;
+}
+
+/* Текст у картці */
+.feature-box h4 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.feature-box span {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Розділювач */
+.about-divider {
+  height: 1px;
+  background-color: #222;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Нижній текст */
+.about-bottom-text {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column; /* На планшеті блоки стають один під одним */
+    gap: 40px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-features {
+    width: 100%; /* Розтягуємо сітку на всю ширину */
+  }
+}
+
+@media (max-width: 500px) {
+  .about-features {
+    grid-template-columns: 1fr; /* На телефоні 1 колонка карток */
+  }
+}
+
+/* --- Секція Контактів --- */
+
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px 40px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.contact-header p {
+  color: #888;
+  font-size: 15px;
+}
+
+/* Сітка з двома картками */
+.contact-cards {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.contact-card {
+  background-color: #080808;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 40px;
+  flex: 1; /* Картки однакової ширини */
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Елементи контактів (ліва картка) */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Червона іконка в квадратику */
+.icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 0, 64, 0.1);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.icon-box svg {
+  width: 20px;
+  height: 20px;
+  fill: #ff0040;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details .label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.contact-details .value {
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.3s;
+}
+
+.contact-details a.value:hover {
+  color: #ff0040;
+}
+
+/* Список годин (права картка) */
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 15px;
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hours-row .day {
+  color: #aaa;
+  font-size: 15px;
+}
+
+.hours-row .time {
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* --- Футер --- */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  border-top: 1px solid #111;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.footer-content {
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-logo span {
+  color: #ff0040;
+}
+
+.footer-tagline {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #ccc;
+}
+
+/* Нижня смужка футера */
+.footer-bottom {
+  border-top: 1px solid #111;
+  padding: 20px 0;
+  font-size: 12px;
+  color: #444;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-legal a:hover {
+  color: #888;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column; /* Картки одна під одну на телефоні */
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-legal {
+    justify-content: center;
+  }
+}
+
+/* --- Анімація появи тексту на головному банері --- */
+
+/* 1. Створюємо саму анімацію (ключові кадри) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Початкова прозорість (невидимо) */
+    transform: translateY(30px); /* Зсув униз на 30 пікселів */
+  }
+  to {
+    opacity: 1; /* Повна видимість */
+    transform: translateY(0); /* Повернення на місце */
+  }
+}
+
+/* 2. Застосовуємо анімацію до елементів */
+
+/* Спочатку ховаємо елементи, щоб вони не миготіли при завантаженні */
+.hero-subtitle,
+.hero-title,
+.hero-button {
+  opacity: 0;
+  /* Назва анімації | Тривалість | Плавність | Зберегти кінцевий стан */
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 3. Додаємо затримку (чергу), щоб вони вилітали один за одним */
+
+/* Підзаголовок з'являється першим (через 0.2 сек) */
+.hero-subtitle {
+  animation-delay: 0.2s;
+}
+
+/* Назва студії другою (через 0.4 сек) */
+.hero-title {
+  animation-delay: 0.4s;
+}
+
+/* Кнопка третьою (через 0.6 сек) */
+.hero-button {
+  animation-delay: 0.6s;
+}
+
+/* --- Секція Портфоліо --- */
+.portfolio-section {
+  background-color: oklch(14.1% 0.005 285.823);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.section-header p {
+  color: #888;
+  margin-bottom: 50px;
+}
+
+/* Сітка */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Картка */
+.track-card {
+  position: relative;
+  aspect-ratio: 1 / 1; /* Робить квадрат */
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #111;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.5s ease,
+    filter 0.3s ease;
+}
+
+/* Ефекти при наведенні або програванні */
+.track-card:hover .cover-img,
+.track-card.playing .cover-img {
+  transform: scale(1.05);
+  filter: brightness(0.6); /* Затемнюємо фото */
+}
+
+/* Оверлей (Шар з кнопкою) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Приховано за замовчуванням */
+  transition: opacity 0.3s ease;
+}
+
+/* Показуємо кнопку, якщо навели мишку АБО якщо пісня грає */
+.track-card:hover .overlay,
+.track-card.playing .overlay {
+  opacity: 1;
+}
+
+/* Червона кнопка */
+.play-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #ff0040;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(255, 0, 64, 0.4);
+  transform: scale(0.8);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.track-card:hover .play-btn {
+  transform: scale(1);
+}
+
+/* SVG Іконки всередині кнопки */
+.play-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Логіка перемикання іконок */
+.icon-pause {
+  display: none;
+} /* Пауза прихована за замовчуванням */
+
+/* Якщо клас playing активний -> ховаємо Play, показуємо Pause */
+.track-card.playing .icon-play {
+  display: none;
+}
+.track-card.playing .icon-pause {
+  display: block;
+}
+
+/* Інфо про трек внизу */
+.track-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.track-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.track-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ccc;
+}
+/* --- Стиль кнопки з подвійною анімацією --- */
+
+.hero-button {
+  /* Ваші базові стилі (колір, фон, розміри) */
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #ff0040;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-top: 30px;
+
+  /* 1. Робимо її спочатку невидимою */
+  opacity: 0;
+
+  /* 2. Запускаємо ДВІ анімації по черзі (через кому) */
+  animation:
+    fadeInUp 0.8s ease-out 0.6s forwards,
+    /* Спочатку вона випливає (один раз) */ pulse-glow 2s infinite 1.4s; /* Потім починає пульсувати (нескінченно, старт через 1.4с) */
+}
+
+/* 3. Щоб не дратувало при наведенні - зупиняємо пульсацію */
+.hero-button:hover {
+  background-color: #d10035;
+  animation: none; /* Зупиняємо анімацію */
+  opacity: 1; /* Гарантуємо, що вона видима */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 64, 0.6);
+}
+
+/* --- Самі кадри анімацій (якщо ви їх ще не додали) --- */
+
+/* Поява знизу */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Пульсація (серцебиття) */
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 64, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(255, 0, 64, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 64, 0);
+  }
+}
+
+.pricing-btn {
+  display: block; /* Щоб кнопка займала всю ширину */
+  width: 100%;
+  background-color: #ff0040;
+  color: white;
+  text-align: center; /* Центруємо текст */
+  text-decoration: none; /* Прибираємо підкреслення посилання */
+  border: none;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  box-sizing: border-box; /* Щоб padding не ламав ширину */
+}
+
+.pricing-btn:hover {
+  background-color: #d10035;
+  color: white; /* Гарантуємо, що текст лишиться білим */
+}

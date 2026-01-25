@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevate Music | Студія звукозапису</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Шрифт Montserrat (найближчий до скріна) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Перший блок (герой) -->
+    <section class="hero-block">
+      <div class="container">
+        <p class="hero-subtitle">Студия звукозаписи</p>
+        <h1 class="hero-title">Elevate Music</h1>
+        <a
+          href="https://t.me/elevate_music_label?text=Привіт, хочу попасти до Вас на студію"
+          target="_blank"
+          class="hero-button"
+          >Забронювати сесію →</a
+        >
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <p class="scroll-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок Послуги -->
+    <section class="services-section">
+      <div class="container">
+        <h2 class="section-title">Послуги</h2>
+        <p class="section-subtitle">
+          Професійні аудіо послуги для втілення вашої музики в життя
+        </p>
+
+        <div class="services-grid">
+          <!-- Перша картка -->
+          <div class="service-card">
+            <div class="service-icon">
+              <!-- Іконка (тимчасова) -->
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L20 7V17L12 22L4 17V7L12 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 22V12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 9L12 12L16 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Студійний запис</h3>
+            <p>
+              Професійний студійний запис вокалу та інструментів з роботою
+              звукорежисера, відбором дублів і контролем якості звучання.
+            </p>
+          </div>
+
+          <!-- Інші картки (5 штук) будуть тут -->
+          <!-- Тимчасові заглушки -->
+          <div class="service-card">
+            <div class="service-icon">♪</div>
+            <h3>Зведення та мастерин</h3>
+            <p>
+              Професійне зведення та мастеринг треків для стримінгових платформ
+              і релізів, баланс, гучність і чистота звучання відповідно до
+              стандартів Spotify, Apple Music та YouTube.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">♬</div>
+            <h3>Аранжування під ключ</h3>
+            <p>
+              Створення повної музичної структури треку з урахуванням настрою,
+              референсів і сучасного звучання.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>Пісня під ключ</h3>
+            <p>
+              Повний цикл створення пісні від ідеї до релізу: написання музики
+              та тексту, аранжування, запис вокалу, зведення, мастеринг,
+              підготовка до дистрибуції.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">↯</div>
+            <h3>Дистрибуція</h3>
+            <p>
+              Розповсюдження вашої музики на всі основні стримінгові платформи:
+              Spotify, Apple Music, YouTube Music та інших сервісах
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">✦</div>
+            <h3>Реклама</h3>
+            <p>
+              Аналіз треку та індивідуальна стратегія просування кожного релізу.
+              Зростання охоплень і прослуховувань, залучення нової аудиторії та
+              розвиток артиста.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="portfolio-container">
+        <div class="section-header">
+          <h2>Портфоліо</h2>
+          <p>Останні проєкти та випущена музика з нашої студії</p>
+        </div>
+
+        <div class="tracks-grid">
+          <div class="track-card" onclick="playTrack(this)">
+            <img src="img/track1.jpg" alt="Album Cover" class="cover-img" />
+
+            <div class="overlay">
+              <div class="play-btn">
+                <svg class="icon-play" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <svg class="icon-pause" viewBox="0 0 24 24">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="track-info">
+              <h3>Заплутались</h3>
+              <p>TWIY</p>
+            </div>
+
+            <audio src="audio/music1.mp3"></audio>
+          </div>
+
+          <div class="track-card" onclick="playTrack(this)">
+            <img src="img/track2.jpg" alt="Album Cover" class="cover-img" />
+            <div class="overlay">
+              <div class="play-btn">
+                <svg class="icon-play" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <svg class="icon-pause" viewBox="0 0 24 24">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              </div>
+            </div>
+            <div class="track-info">
+              <h3>Хвилини</h3>
+              <p>Lexmar</p>
+            </div>
+            <audio src="audio/LEXMAR - Хвилини.mp3"></audio>
+          </div>
+
+          <div class="track-card" onclick="playTrack(this)">
+            <img src="img/track3.jpeg" alt="Album Cover" class="cover-img" />
+            <div class="overlay">
+              <div class="play-btn">
+                <svg class="icon-play" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <svg class="icon-pause" viewBox="0 0 24 24">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              </div>
+            </div>
+            <div class="track-info">
+              <h3>Опіум</h3>
+              <p>Lika Gavar</p>
+            </div>
+            <audio src="audio/track3.wav"></audio>
+          </div>
+
+          <div class="track-card" onclick="playTrack(this)">
+            <img src="img/track4.jpg" alt="Album Cover" class="cover-img" />
+            <div class="overlay">
+              <div class="play-btn">
+                <svg class="icon-play" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <svg class="icon-pause" viewBox="0 0 24 24">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              </div>
+            </div>
+            <div class="track-info">
+              <h3>Glitch</h3>
+              <p>GLITCH</p>
+            </div>
+            <audio src="audio/track4.wav"></audio>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pricing-section">
+      <h2 class="section-title">Ціни</h2>
+      <p class="section-subtitle">Прозорі ціни на професійні послуги</p>
+      <div class="pricing-container">
+        <div class="pricing-card">
+          <h3>Запис</h3>
+          <p class="desc">Професійний час студійного запису</p>
+          <div class="price-block">
+            <span class="currency">₴</span><span class="amount">1000</span>
+            <span class="unit">/ за годину</span>
+          </div>
+          <div class="divider"></div>
+          <ul class="features-list">
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Робота звукорежисера
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Запис вокалу або інструментів
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Базовий монтаж записаного матеріалу
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Відбір найкращих дублів
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Консультації по виконанню, інтонації та подачі
+            </li>
+          </ul>
+          <a
+            href="https://t.me/elevate_music_label?text=Привіт, хочу попасти до Вас на студію?"
+            target="_blank"
+            class="pricing-btn"
+            >Почати</a
+          >
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>Зведення</h3>
+          <p class="desc">Професійне зведення треку</p>
+          <div class="price-block">
+            <span class="currency">₴</span><span class="amount">6000</span>
+            <span class="unit">/ за пісню</span>
+          </div>
+          <div class="divider"></div>
+          <ul class="features-list">
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Балансування гучності всіх інструментів і вокалу
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Еквалізація та динамічна обробка
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Просторова обробка
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Ручна редакція вокалу по нотах і таймінгу
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Підготовка треку до мастерингу
+            </li>
+          </ul>
+          <a
+            href="https://t.me/elevate_music_label?text=Привіт, мпені потрібне зведення?"
+            target="_blank"
+            class="pricing-btn"
+            >Почати</a
+          >
+        </div>
+
+        <div class="pricing-card">
+          <h3>Мастеринг</h3>
+          <p class="desc">Фінальна обробка треку</p>
+          <div class="price-block">
+            <span class="currency">₴</span><span class="amount">1500</span>
+            <span class="unit">/ за пісню</span>
+          </div>
+          <div class="divider"></div>
+          <ul class="features-list">
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Фінальна еквалізація та динамічна обробка
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Оптимізація під стримінгові стандарти
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Контроль балансу та стереоширини
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Підготовка фінальних файлів для релізу
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Експорт у високій якості WAV та MP3
+            </li>
+          </ul>
+          <a
+            href="https://t.me/elevate_music_label?text=Привіт, мені потрбен мастеринг"
+            target="_blank"
+            class="pricing-btn"
+            >Почати</a
+          >
+        </div>
+
+        <div class="pricing-card">
+          <h3>Аранжування під ключ</h3>
+          <p class="desc">Створення аранжування для вашої композиції</p>
+          <div class="price-block">
+            <span class="currency">₴</span><span class="amount">8000</span>
+            <span class="unit">/ за пісню</span>
+          </div>
+          <div class="divider"></div>
+          <ul class="features-list">
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Розробка структури пісні та музичної ідеї
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Підбір інструментів та звуків
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Саунд-дизайн
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Запис живих інструментів за потреби
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Професійне зведення готового аранжування
+            </li>
+          </ul>
+          <a
+            href="https://t.me/elevate_music_label?text=Привіт, мені потрібне аранжування?"
+            target="_blank"
+            class="pricing-btn"
+            >Почати</a
+          >
+        </div>
+
+        <div class="pricing-card">
+          <h3>Пісня під ключ</h3>
+          <p class="desc">Повне виробництво пісні від початку до кінця</p>
+          <div class="price-block">
+            <span class="currency">₴</span><span class="amount">35,000</span>
+            <span class="unit">/ за пісню</span>
+          </div>
+          <div class="divider"></div>
+          <ul class="features-list">
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Написання музики та тексту
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Аранжування пісні під стиль виконавця
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Запис вокалу у студії
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Професійне зведення та мастеринг треку
+            </li>
+            <li>
+              <span class="check-icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  ></path></svg></span
+              >Підготовка пісні до дистрибуції на стримінгові платформи
+            </li>
+          </ul>
+          <a
+            href="https://t.me/elevate_music_label?text=Привіт, я хочу пісню під ключ?"
+            target="_blank"
+            class="pricing-btn"
+            >Почати</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="distribution-section">
+      <div class="dist-container">
+        <div class="dist-header">
+          <h2>Дистрибуція</h2>
+          <p class="dist-subtitle">
+            Розміщення музики на всіх основних платформах із повним супроводом
+            релізу. Ми працюємо у партнерстві з Best Music та завантажуємо
+            релізи через офіційного дистриб’ютора The Orchard.
+          </p>
+        </div>
+
+        <div class="dist-features">
+          <div class="dist-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"></path>
+              </svg>
+            </div>
+            <h3>Музична Дистрибуція</h3>
+            <p>
+              Розміщення треків на Spotify, Apple Music, YouTube Music та інших
+              стримінгових платформах по всьому світу. Коректна підготовка
+              релізу, метаданих і контроль публікації.
+            </p>
+          </div>
+
+          <div class="dist-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Управління роялті</h3>
+            <p>
+              Прозорий облік прослуховувань і доходів з платформ. Виплати роялті
+              артистам здійснюються раз на квартал із детальною звітністю.
+            </p>
+          </div>
+
+          <div class="dist-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 3c-4.97 0-9 4.03-9 9v7c0 1.1.9 2 2 2h4v-8H5v-1c0-3.87 3.13-7 7-7s7 3.13 7 7v1h-4v8h4c1.1 0 2-.9 2-2v-7c0-4.97-4.03-9-9-9z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Підтримка артистів</h3>
+            <p>
+              Супровід незалежних артистів на всіх етапах релізу. Консультації,
+              рекомендації та допомога в розвитку проєкту після виходу треку.
+            </p>
+          </div>
+
+          <div class="dist-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Аналітика та просування</h3>
+            <p>
+              Аналітика релізів, пітчинг і промо для збільшення охоплень. Ми
+              робимо максимум, щоб трек набирав якомога більше прослуховувань і
+              потрапляв до рекомендацій.
+            </p>
+          </div>
+        </div>
+
+        <div class="dist-divider"></div>
+
+        <div class="dist-footer">
+          <p class="platforms-title">Доступно на всіх основних платформах</p>
+          <div class="platforms-list">
+            <span>Spotify</span>
+            <span>Apple Music</span>
+            <span>YouTube Music</span>
+            <span>Amazon Music</span>
+            <span>Tidal</span>
+            <span>Deezer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-container">
+        <h2 class="section-title">Про нас</h2>
+
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Маючи понад 15 років досвіду в музичному виробництві, студія
+              Elevate Music є надійним партнером для артистів, які цінують
+              професійну якість і персональний підхід.
+            </p>
+            <p>
+              Ми працюємо виключно з професійним обладнанням індустріального
+              стандарту — від мікрофонів і підсилювачів до сучасних цифрових
+              аудіоробочих станцій і систем моніторингу.
+            </p>
+            <p>
+              Наша робота не обмежується лише записом. Ми супроводжуємо артистів
+              на всіх етапах творчого процесу, допомагаючи реалізувати ідеї та
+              досягати результату, який відповідає сучасним стандартам звучання.
+            </p>
+          </div>
+
+          <div class="about-features">
+            <div class="feature-box">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 7.5c.97 0 1.75-.78 1.75-1.75S12.97 4 12 4s-1.75.78-1.75 1.75S11.03 7.5 12 7.5zM12 2C9.24 2 7 4.24 7 7c0 2.14 1.35 3.96 3.26 4.67L7 20l5-2 5 2-3.26-8.33C15.65 10.96 17 9.14 17 7c0-2.76-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"
+                  />
+                </svg>
+              </div>
+              <h4>15+ років</h4>
+              <span>Досвіду</span>
+            </div>
+
+            <div class="feature-box">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"
+                  />
+                  <path
+                    d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"
+                  />
+                </svg>
+              </div>
+              <h4>Професійне</h4>
+              <span>Обладнання</span>
+            </div>
+
+            <div class="feature-box">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </div>
+              <h4>Фокус на</h4>
+              <span>Артистах</span>
+            </div>
+
+            <div class="feature-box">
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"
+                  />
+                </svg>
+              </div>
+              <h4>Преміум</h4>
+              <span>Якість</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-divider"></div>
+
+        <p class="about-bottom-text">
+          Незалежно від того, чи ви починаючий артист, чи досвідчений
+          виконавець, ми допомагаємо створювати музику, яка звучить професійно
+          та знаходить свою аудиторію.
+        </p>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>Зв'яжіться з нами</h2>
+          <p>
+            Готові реалізувати вашу ідею? Зв’яжіться з нами для обговорення
+            деталей.
+          </p>
+        </div>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <h3>Контактна інформація</h3>
+
+            <div class="contact-item">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="label">Email</span>
+                <a href="mailto:elevate.label.booking@gmail.com" class="value"
+                  >elevate.label.booking@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 1.25 0 2.45.2 3.57.57.35.13.46.51.24.79l-2.2 2.2z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="label">Телефон</span>
+                <a href="tel:+380738219920" class="value"
+                  >+380 (73) 821-99-20</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="label">Місцезнаходження</span>
+                <span class="value"
+                  >вул. Михайла Коцюбинського, 9<br />Київ, Україна 02000</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Робочі години студії</h3>
+
+            <div class="hours-list">
+              <div class="hours-row">
+                <span class="day">Понеділок - П'ятниця</span>
+                <span class="time">9:00 - 22:00</span>
+              </div>
+              <div class="hours-row">
+                <span class="day">Субота</span>
+                <span class="time">10:00 - 20:00</span>
+              </div>
+              <div class="hours-row">
+                <span class="day">Неділя</span>
+                <span class="time">За домовленістю</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">Elevate<span>Music</span></div>
+        <p class="footer-tagline">
+          студія звукозапису з фокусом на артистів, які цінують якість і
+          персональний підхід.
+        </p>
+
+        <div class="social-links">
+          <a href="#" class="social-icon"
+            ><svg viewBox="0 0 24 24">
+              <path
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-icon"
+            ><svg viewBox="0 0 24 24">
+              <path
+                d="M21.58 7.19c-.23-.86-.9-1.54-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.82.42c-.86.23-1.54.9-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.9 1.54 1.77 1.77C5.74 19 12 19 12 19s6.26 0 7.82-.42c.86-.23 1.54-.9 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-icon"
+            ><svg viewBox="0 0 24 24">
+              <path
+                d="M16.6 5.82C16.1 5.35 16 4.4 16 4h-3v10.5c0 1.5-1.4 2.9-3 2.9s-3-1.4-3-2.9 1.4-2.9 3-2.9c.4 0 .8.1 1.1.2V8.2c-.4-.1-.7-.2-1.1-.2-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V8.6c1.2.9 2.7 1.4 4.3 1.4v-3c-1.3 0-2.5-.4-3.7-1.18z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-icon"
+            ><svg viewBox="0 0 24 24">
+              <path
+                d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.432z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <span> 2026 Elevate Music. Усі права захищені.</span>
+          <div class="footer-legal">
+            <a href="#">Політика конфіденційності</a>
+            <a href="#">Умови обслуговування</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
