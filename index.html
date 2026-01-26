@@ -15,16 +15,32 @@
   </head>
   <body>
     <!-- Перший блок (герой) -->
-    <section class="hero-block">
-      <div class="container">
+  <section class="hero-block">
+    <!-- Додайте цей блок для логотипа -->
+    <div class="top-header">
+        <div class="container">
+            <div class="header-logo">
+                <img src="img/musiclabel.png" alt="Elevate Music" class="logo-img">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container hero-content">
+        <!-- Ваш поточний контент -->
         <p class="hero-subtitle">Студия звукозаписи</p>
         <h1 class="hero-title">Elevate Music</h1>
-        <a
-          href="https://t.me/elevate_music_label?text=Привіт, хочу попасти до Вас на студію"
-          target="_blank"
-          class="hero-button"
-          >Забронювати сесію →</a
-        >
+        <a href="https://t.me/elevate_music_label?text=Привіт,%20хочу%20забронювати%20сесію%20на%20студії%20Elevate%20Music" 
+   target="_blank" 
+   class="hero-button">
+    Забронювати сесію →
+</a>
+    </div>
+    
+    <div class="scroll-indicator">
+        <!-- ... -->
+    </div>
+</section>
         <div class="scroll-indicator">
           <div class="mouse">
             <div class="wheel"></div>
@@ -136,6 +152,50 @@
         </div>
       </div>
     </section>
+
+        <!-- Крутий міні-плеєр (завжди видно) -->
+    <div class="floating-player">
+        <div class="player-mini">
+            <div class="mini-cover">
+                <img src="img/track1.jpg" alt="Now Playing" id="mini-cover-img">
+            </div>
+            <div class="mini-info">
+                <div class="mini-title" id="mini-title">Заплутались</div>
+                <div class="mini-artist" id="mini-artist">TWY</div>
+            </div>
+            <div class="mini-controls">
+                <button class="mini-prev" onclick="prevMiniTrack()">◁</button>
+                <button class="mini-play" onclick="toggleMiniPlayer()">▶</button>
+                <button class="mini-next" onclick="nextMiniTrack()">▷</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Анімовані частинки фону -->
+    <div class="particles-container"></div>
+
+    <!-- Модальне вікно для замовлення -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>Замовити послугу</h3>
+            <form id="orderForm">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Телефон">
+                <select required>
+                    <option value="">Оберіть послугу</option>
+                    <option value="recording">Студійний запис</option>
+                    <option value="mixing">Зведення</option>
+                    <option value="mastering">Мастеринг</option>
+                    <option value="arrangement">Аранжування</option>
+                    <option value="full">Пісня під ключ</option>
+                </select>
+                <textarea placeholder="Деталі проекту..."></textarea>
+                <button type="submit" class="modal-submit">Відправити заявку</button>
+            </form>
+        </div>
+    </div>
 
     <section class="portfolio-section">
       <div class="portfolio-container">
@@ -831,6 +891,20 @@
         </div>
       </div>
     </footer>
+
+    <button id="backToTopBtn" title="Повернутися вгору">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>
