@@ -67,7 +67,6 @@ body {
 /* ============================================ */
 /* 2. ГОЛОВНИЙ БАНЕР (HERO SECTION) */
 /* ============================================ */
-
 .hero-block {
   min-height: 100vh;
   display: flex;
@@ -82,7 +81,7 @@ body {
       rgba(0, 0, 0, 0.5) 50%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("img/baner.jpeg") no-repeat center center;
+    url("img/hero.jpeg") no-repeat center center;
   background-size: cover;
 }
 
@@ -1581,5 +1580,30 @@ body {
 
   .modal-content {
     padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* одна картка на рядок */
+    gap: 30px; /* відстань між картками */
+  }
+
+  .service-card {
+    padding: 30px 20px; /* трохи зменшили паддінг для мобільних */
+  }
+
+  .services-section {
+    padding: 60px 20px; /* зменшили вертикальні відступи */
+  }
+
+  .services-section .section-title {
+    font-size: 36px; /* трохи менше для мобільних */
+  }
+
+  .services-section .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
   }
 }
