@@ -1611,3 +1611,10 @@ body {
     margin-bottom: 40px;
   }
 }
+
+.contact-details a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
