@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+a {
+  list-style: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background: #000;

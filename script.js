@@ -7,8 +7,8 @@ let currentTrackIndex = 0;
 // Дані треків для міні-плеєра
 const tracks = [
   {
-    title: "Заплутались",
-    artist: "TWY",
+    title: "Не дивись",
+    artist: "TWIY",
     cover: "img/track1.jpg",
     audio: "audio/music1.mp3",
   },
@@ -26,7 +26,7 @@ const tracks = [
   },
   {
     title: "Glitch",
-    artist: "GLITCH",
+    artist: "TWIY",
     cover: "img/track4.jpg",
     audio: "audio/track4.wav",
   },
